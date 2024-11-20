@@ -3,12 +3,12 @@ def IsWebPageOnServer(webSite):
     import requests
     webSite = 'https://the-radio.ru/playlist/maximum-r962'
     try:
-        requests.get(webSite)#'https://<вебсайт>.ru/', proxies={"http(s)":'<прокси:порт>'}
+        requests.get(webSite)
     except:
-        print('Нет доступа к веб-сайту из интернета!')
+        print('Нет доступа к веб-сайту из интернета')
         return False
     else:
-        print('сайт РАБОТАЕТ!')
+        print('Можно посылать запросы на сайт')
         return True
     
 def VerifySSL(webSite):
